@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do</title>
+</head>
+<style>
+ :root {
+            --primary-navy: #000080;        /* Primary: Classic Navy Blue */
+            --secondary-white: #FFFFFF;     /* Secondary: Bright White */
+            --accent-slate: #708090;       /* Accent 1: Slate Gray (Text/Structure) */
+            --page-bg: #f4f4f4;             /* Light background for overall page */
+            --separator-line: #DDDDDD;      /* Light gray line for division */
+        }
+
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--page-bg);
+            color: var(--accent-slate);
+        }
+        header {
+            background-color: var(--primary-navy); 
+            color: var(--secondary-white);
+            padding: 20px;
+            text-align: center;
+        }
+nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav a {
+            color: var(--secondary-white);
+            text-decoration: none;
+            padding: 5px 0;
+            transition: opacity 0.3s;
+        }
+        nav a:hover {
+            opacity: 0.8; 
+            border-bottom: 2px solid var(--secondary-white); 
+        }
+
+          /*MAIN CONTENT CONTAINER*/
+        .content-container {
+            max-width: 1000px; 
+            margin: 20px auto;
+            background-color: var(--secondary-white); 
+            padding: 30px 30px 0 30px; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+         section {
+           background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+            overflow: hidden; 
+        }
+
+            /* Clearfix to ensure sections correctly enclose floated elements */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+       /* Remove the border from the last section */
+        section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 30px; 
+       
+        }
+
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .left-align {
+            text-align: left;
+        }
+        .key-benefit {
+            font-weight: bold;
+            
+        }
+
+    .hero-banner {
+  
+    background-image: url("banner.png"); /* Replace with your banner image URL */
+    background-size: cover;
+    background-position: center;
+    min-height: 600px; /* Define a minimum height for the banner area */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    font-family: var(--font-stack);
+    text-align: center;
+    position: relative; /* Needed for the overlay */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Semi-transparent dark overlay to ensure white text pops out */
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 20px;
+    padding: 20px;
+    z-index: 10; /* Ensure content is above the overlay */
+}
+
+/* --- MAIN HEADLINES --- */
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive, large headline */
+    color: var(--secondary-color); /* Bright White text over dark background */
+    margin: 0 0 10px 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    color: var(--cta-bright-blue); /* Use a vibrant color to highlight the value */
+    font-weight: 600;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* VALUE PROPOSITION CARD */
+
+.hero-description-card {
+    display: flex;
+    text-align: left;
+    background-color: var(--secondary-color); /* Bright White card background */
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    position: relative;
+}
+
+/* Vertical highlight bar */
+.card-highlight {
+    width: 6px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--cta-bright-blue)); /* Gradient for a modern look */
+    border-radius: 3px;
+    margin-right: 25px;
+    flex-shrink: 0; /* Prevents the bar from shrinking */
+}
+
+.description-title {
+    font-size: 1.6rem;
+    color: var(--primary-color); /* Navy Blue text */
+    margin: 0 0 15px 0;
+    font-weight: 700;
+}
+
+.hero-description-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--primary-color); /* Navy Blue text */
+    margin-bottom: 25px;
+}
+
+/* --- CALL-TO-ACTION BUTTON --- */
+
+.hero-cta-button {
+    display: inline-block;
+    background-color: var(--primary-color); /* Navy Blue background */
+    color: var(--secondary-color); /* Bright White text */
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.hero-cta-button:hover {
+    background-color: var(--secondary-color); /* White background on hover */
+    color: var(--primary-color); /* Navy Blue text on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 31, 76, 0.3); /* Navy blue shadow on hover */
+}
+
+</style>
+<body>
+
+    <header>
+        <h1>Selektive</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="How It Works.html">How It Works</a></li>
+                <li><a href="hosts.html">Hosts</a></li>
+                <li><a href="#section4">Attendees</a></li>
+                <li><a href="#section5">About</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+   <section class="hero-banner">
+    <div class="hero-overlay">
+        <img src="bannner.png" alt="Banner Image" style="display:none;">
+        <div class="hero-content">
+            
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <main class="content-container">
+
+
+    
+        
+        <section id="section1" class="clearfix">
+         <div class="how-it-works-section">
+
+        <h2>The Event Flow: How It Works</h2>
+
+        <div class="step">
+            <div class="step-header">Step 1 Create: Design Your Vibe</div>
+            <p class="step-description">
+                Set the stage for your event. Define the time, location, theme, and maximum number of guests. Then invite an initial pool of nominees who you think would be great attendees.
+            </p>
+            <ul class="key-action-list">
+                <li>Set event details and capacity limits</li>
+                <li>Define voting rules and requirements</li>
+                <li>Invite your initial nominee pool</li>
+                <li>Customize event theme and atmosphere</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <div class="step-header">Step 2 Discover: Vote for Your Guests</div>
+            <p class="step-description">
+                Browse the event and see all nominees. Attendees vote for who they most want to connect with. 
+            </p>
+            <ul class="key-action-list">
+                <li>Browse event details and fellow nominees</li>
+                <li>Select attendees you want to meet</li>
+                <li>See updated selection list in real-time</li>
+                <li><span class="highlight">Top-selected nominees get confirmed spots</span></li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <div class="step-header">Step 3 Connect: Experience the Event</div>
+            <p class="step-description">
+                You receive the final guestlist crafted by attendees. Confirmed guests arrive knowing every person was actively chosen by the community.
+            </p>
+            <ul class="key-action-list">
+                <li>Certified guestlist</li>
+                <li>Connect with highly-desired attendees</li>
+                <li>Enjoy meaningful interactions</li>
+                <li>Build lasting social connections</li>
+            </ul>
+        </div>
+
+        <div class="cta-container">
+            <a href="#" class="cta-button">Create Events</a>
+        </div>
+
+    </div>
+        </section>
+
+        <section id="section2" class="clearfix">
+             <table>
+        <caption>Event Blueprint</caption>
+        <thead>
+            <tr>
+                <th>Event Type</th>
+                <th>Ideal Capacity</th>
+                <th>Recommended Voting Length</th>
+                <th>Key Benefit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="left-align">Exclusive Dinner Party</td>
+                <td>10–20</td>
+                <td>24 Hours</td>
+                <td class="key-benefit">Ensures intimate, high-quality guest list</td>
+            </tr>
+            <tr>
+                <td class="left-align">Professional Networking Mixer</td>
+                <td>50–100</td>
+                <td>72 Hours</td>
+                <td class="key-benefit">Maximizes diversity of professional connections</td>
+            </tr>
+            <tr>
+                <td class="left-align">Large Community Gathering</td>
+                <td>100+</td>
+                <td>1 Week</td>
+                <td class="key-benefit">Allows the community to truly shape the attendee list</td>
+            </tr>
+            <tr>
+                <td class="left-align">Small Mastermind Group</td>
+                <td>5–10</td>
+                <td>12 Hours</td>
+                <td class="key-benefit">Quick vetting for trusted, committed participants</td>
+            </tr>
+        </tbody>
+    </table>
+            </section>
+
+             <section id="section3" class="clearfix">
+            <div class="cta-section">
+        <p class="cta-text">
+            Ready to Host?
+            <br>
+            Create your first event and experience the difference of community-curated guests
+        </p>
+        <a href="#" class="cta-button">Create Event</a>
+    </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Setor Agodo Selektive&copy;</p>
+    </footer>
+
+</body>
+</html>
