@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="selektive.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+             <nav class="navbar">
+            <div class="navdiv"> 
+            <div class="logo"><a href="#">Selektive</a></div> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="How It Works.html">How It Works</a></li>
+                <li><a href="hosts.html">Hosts</a></li>
+                <li><a href="Attendees.html">Attendees</a></li>
+                <li><a href="about us.html">About</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+ <section class="hero-banner">
+    <div class="hero-overlay">
+        <img src="bannner.png" alt="Banner Image" style="display:none;">
+        <div class="hero-content">
+            
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <main class="content-container">
+        
+
+
+        <section id="section2" class="clearfix">
+             <form class="contact-form" action="submit_form_endpoint" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Select a topic...</option>
+                    <option value="hosting">Hosting/Event Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="partnership">Partnership/Media</option>
+                    <option value="feedback">General Feedback</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Setor Agodo Selektive&copy;</p>
+    </footer>
+
+</body>
+</html>

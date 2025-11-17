@@ -4,269 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <style>
-        /* COLOR PALETTE: Navy, White, Slate Gray */
-        :root {
-            --primary-navy: #000080;        /* Primary: Classic Navy Blue */
-            --secondary-white: #FFFFFF;     /* Secondary: Bright White */
-            --accent-slate: #708090;       /* Accent 1: Slate Gray (Text/Structure) */
-            --page-bg: #f4f4f4;             /* Light background for overall page */
-            --separator-line: #DDDDDD;      /* Light gray line for division */
-        }
-        
-        /* GENERAL STYLES */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--page-bg);
-            color: var(--accent-slate);
-        }
-        
-        /* HEADER (Primary: Classic Navy) */
-        header {
-            background-color: var(--primary-navy); 
-            color: var(--secondary-white);
-            padding: 20px;
-            text-align: center;
-        }
-
-        /*NAVIGATION*/
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-        nav a {
-            color: var(--secondary-white);
-            text-decoration: none;
-            padding: 5px 0;
-            transition: opacity 0.3s;
-        }
-        nav a:hover {
-            opacity: 0.8; 
-            border-bottom: 2px solid var(--secondary-white); 
-        }
-        
-        /* MAIN CONTENT CONTAINER */
-        .content-container {
-            max-width: 1000px; 
-            margin: 20px auto;
-            background-color: var(--secondary-white); 
-            padding: 30px 30px 0 30px; 
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-        }
-        
-        /*SECTIONS (Larger Continuous Style)*/
-        section {
-           background-color: #ffffff;
-        border: 1px solid #ddd;
-        padding: 15px;
-        margin-bottom: 15px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-            overflow: hidden; 
-        }
-
-        /* Clearfix to ensure sections correctly enclose floated elements */
-        .clearfix::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Remove the border from the last section */
-        section:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 30px; 
-        }
-        
-        /* Section Headings (Primary: Classic Navy) */
-        section h2 {
-            color: var(--primary-navy); 
-            margin-top: 0;
-            padding-bottom: 10px; 
-        }
-
-        /*IMAGE STYLING: Set to 500x500*/
-        .section-image {
-            width: 500px;  /* Fixed width */
-            height: 500px; /* Fixed height */
-            object-fit: cover; 
-            border-radius: 8px; 
-        }
-
-        /* Specific alignment for images within sections */
-        .image-left {
-            float: left;
-            margin: 0 20px 20px 0; /* Margin on right and bottom */
-        }
-
-        .image-right {
-            float: right;
-            margin: 0 0 20px 20px; /* Margin on left and bottom */
-        }
-        
-        /*FOOTER (Accent 1: Slate Gray)*/
-        footer {
-            background-color: var(--accent-slate); 
-            color: var(--secondary-white);
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
-        footer p {
-            margin: 0;
-        }
-        
-        /* Primary CTA Button (Classic Navy button) */
-        .cta-button {
-            background-color: var(--primary-navy);
-            color: var(--secondary-white); 
-            padding: 8px 15px;
-            border-radius: 4px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            margin-left: 15px;
-        }
-        .cta-button:hover {
-            background-color: #0000a8;
-        }
-    
-   .hero-banner {
-    
-    background-image: url("banner.png"); /* Replace with your banner image URL */
-    background-size: cover;
-    background-position: center;
-    min-height: 600px; /* Define a minimum height for the banner area */
-    display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    font-family: var(--font-stack);
-    text-align: center;
-    position: relative; /* Needed for the overlay */
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Semi-transparent dark overlay to ensure white text pops out */
-    background-color: rgba(0, 0, 0, 0.6); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content {
-    max-width: 900px;
-    margin: 0 20px;
-    padding: 20px;
-    z-index: 10; /* Ensure content is above the overlay */
-}
-
-/* --- MAIN HEADLINES --- */
-
-.hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive, large headline */
-    color: var(--secondary-color); /* Bright White text over dark background */
-    margin: 0 0 10px 0;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
-}
-
-.hero-subtitle {
-    font-size: clamp(1.2rem, 2vw, 1.6rem);
-    color: var(--cta-bright-blue); /* Use a vibrant color to highlight the value */
-    font-weight: 600;
-    margin: 0 0 40px 0;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-/* VALUE PROPOSITION CARD */
-
-.hero-description-card {
-    display: flex;
-    text-align: left;
-    background-color: var(--secondary-color); /* Bright White card background */
-    padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-    margin-top: 40px;
-    position: relative;
-}
-
-/* Vertical highlight bar */
-.card-highlight {
-    width: 6px;
-    background: linear-gradient(to bottom, var(--primary-color), var(--cta-bright-blue)); /* Gradient for a modern look */
-    border-radius: 3px;
-    margin-right: 25px;
-    flex-shrink: 0; /* Prevents the bar from shrinking */
-}
-
-.description-title {
-    font-size: 1.6rem;
-    color: var(--primary-color); /* Navy Blue text */
-    margin: 0 0 15px 0;
-    font-weight: 700;
-}
-
-.hero-description-card p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--primary-color); /* Navy Blue text */
-    margin-bottom: 25px;
-}
-
-/* --- CALL-TO-ACTION BUTTON --- */
-
-.hero-cta-button {
-    display: inline-block;
-    background-color: var(--primary-color); /* Navy Blue background */
-    color: var(--secondary-color); /* Bright White text */
-    padding: 14px 30px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: 2px solid var(--primary-color);
-}
-
-.hero-cta-button:hover {
-    background-color: var(--secondary-color); /* White background on hover */
-    color: var(--primary-color); /* Navy Blue text on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 31, 76, 0.3); /* Navy blue shadow on hover */
-}
-    
-    </style>
+    <link rel="stylesheet" href="selektive.css"/>
 </head>
 <body>
 
     <header>
-        <h1>Selektive</h1>
+    
         <nav>
+            <nav class="navbar">
+            <div class="navdiv"> 
+            <div class="logo"><a href="#">Selektive</a></div>  
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="How It Works.html">How It Works</a></li>
                 <li><a href="hosts.html">Hosts</a></li>
-                <li><a href="#section4">Attendees</a></li>
-                <li><a href="#section5">About</a></li>
+                <li><a href="Attendees.html">Attendees</a></li>
+                <li><a href="about us.html">About</a></li>
                 
             </ul>
         </nav>
@@ -281,7 +34,7 @@
 
             <div class="hero-description-card">
                 <div class="card-highlight"></div> <div class="card-text"> 
-                    <a href="#access" class="hero-cta-button">Sign-up Here</a>
+                    <a href="sign-up page.html" class="hero-cta-button">Sign-up Here</a>
                 </div>
             </div>
         </div>
