@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selektive: The social event platform for curated connections. Host private events with confirmed, community-voted attendees. High engagement guaranteed.">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Setor Agodo">
+    <title>Login</title>
+    <link rel="stylesheet" href="selektive.css"> 
+</head>
+<body class="Loginpage">
+
+    <div class="login-container">
+
+        <h1>Create Event</h1>
+        <p class="subtitle"> Thank You For Choosing Selektive! </p>
+
+       <div id="success-message">
+            <div class="thankyou-content">
+                
+                <p style="color: red; font-weight: bold; font-size: 0.9em;"></p>
+                <a href="index.html" class="home-button">Home</a>
+            </div>
+        </div>
+
+        <form id="registration-form" action="#success-message" method="GET">
+
+        <div class="form-group">
+                <label for="event_name">Event Name</label>
+                <input type="text" id="event_name" name="event_name" placeholder="E.g., Monthly Tech Founders Dinner" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event_description">Event Description</label>
+                <textarea id="event_description" name="event_description" placeholder="A brief, engaging description to attract the right nominees." required></textarea>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="datetime">Date and Time</label>
+                    <input type="datetime-local" id="datetime" name="datetime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="capacity">Maximum Capacity (Guests)</label>
+                    <input type="number" id="capacity" name="capacity" min="5" placeholder="Minimum 5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="location_type">Location Type</label>
+                    <select id="location_type" name="location_type" required>
+                        <option value="physical">Physical Location</option>
+                        <option value="virtual">Virtual (Online Link)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="event_category">Event Category</label>
+                    <select id="event_category" name="event_category" required>
+                        <option value="networking">Professional Networking</option>
+                        <option value="social">Social/Casual</option>
+                        <option value="community">Community Meetup</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-group full-width">
+                <label for="location_detail">Location Address or Virtual Link</label>
+                <input type="text" id="location_detail" name="location_detail" placeholder="Enter full address or meeting link (e.g., Zoom/Google Meet)" required>
+            </div>
+
+            <button type="submit" class="login-button">Create Event</button>
+</form>
+
+
+    </div>
+
+
+</body>
+</html>

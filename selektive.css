@@ -167,7 +167,7 @@
     background-image: url("banner.png"); /* Replace with your banner image URL */
     background-size: cover;
     background-position: center;
-    min-height: 600px; /* Define a minimum height for the banner area */
+    min-height: 450px; /* Define a minimum height for the banner area */
     display: flex;
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
@@ -488,11 +488,265 @@
         .home-button {
             display: inline-block;
             padding: 12px 25px;
-            background-color: #007bff;
+            background-color: #000080;
             color: white;
             border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
         }
 
+body.Loginpage {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--page-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Login Container --- */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: var(--secondary-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Header/Title --- */
+.login-container h1 {
+    text-align: center;
+    color: var(--primary-navy);
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+.login-container p.subtitle {
+    text-align: center;
+    color: var(--accent-slate);
+    margin-bottom: 30px;
+    font-size: 1em;
+}
+
+/* --- Form Elements --- */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-navy);
+}
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--separator-line);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+}
+
+/* --- Submit Button --- */
+.login-button {
+    width: 100%;
+    background-color: var(--primary-navy);
+    color: var(--secondary-white);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+.login-button:hover {
+    /* Slightly darker navy on hover */
+    background-color: #000066;
+}
+
+/* --- Utility Links --- */
+.utility-links {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--separator-line);
+}
+.utility-links a {
+    color: var(--accent-slate);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+.utility-links a:hover {
+    color: var(--primary-navy);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 480px) {
+    .login-container {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+}
+
+/* --- Login Container --- */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: var(--secondary-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Header/Title --- */
+.login-container h1 {
+    text-align: center;
+    color: var(--primary-navy);
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+.login-container p.subtitle {
+    text-align: center;
+    color: var(--accent-slate);
+    margin-bottom: 30px;
+    font-size: 1em;
+}
+
+/* --- Form Elements --- */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-navy);
+}
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--separator-line);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+}
+
+/* --- Submit Button --- */
+.login-button {
+    width: 100%;
+    background-color: var(--primary-navy);
+    color: var(--secondary-white);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+.login-button:hover {
+    /* Slightly darker navy on hover */
+    background-color: #000066;
+}
+
+/* --- Utility Links --- */
+.utility-links {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--separator-line);
+}
+.utility-links a {
+    color: var(--accent-slate);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+.utility-links a:hover {
+    color: var(--primary-navy);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 480px) {
+    .login-container {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+}
+
+
+.slideshow-container {
+    max-width: 900px; 
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden; 
+    box-sizing: border-box; 
+    border: 4px solid #000080; /* Navy Border */
+    border-radius: 8px;
+}
+
+/* Defines the fixed HEIGHT using the aspect ratio trick (16:9) */
+.slideshow-container::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%; 
+}
+
+/* 2. Slides Wrapper (Must fill container height) */
+.slides-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+/* 3. Individual Slide Styling */
+.mySlides {
+    /* Initially hide all slides */
+    display: none; 
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* Add transition for the fade effect */
+    transition: opacity 0.8s ease-in-out;
+    opacity: 0; /* Hidden by default */
+}
+
+/* 4. Image Styling */
+.mySlides img {
+    width: 100%;
+    height: 100%; 
+    object-fit: contain; 
+    display: block; 
+}
+
+/* 5. JavaScript Toggled Class: Makes the active slide visible */
+.mySlides.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Fade animation (optional, managed by the opacity transition) */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 

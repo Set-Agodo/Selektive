@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selektive: The social event platform for curated connections. Host private events with confirmed, community-voted attendees. High engagement guaranteed.">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Setor Agodo">
     <title>Home</title>
     <link rel="stylesheet" href="selektive.css"/>
 </head>
@@ -34,7 +37,8 @@
 
             <div class="hero-description-card">
                 <div class="card-highlight"></div> <div class="card-text"> 
-                    <a href="sign-up page.html" class="hero-cta-button">Sign-up Here</a>
+                    <a href="Sign-up.html" class="hero-cta-button">Sign-up</a>
+                    <a href="login.html" class="hero-cta-button">Login</a>
                 </div>
             </div>
         </div>
@@ -42,6 +46,33 @@
 </section>
 
     <main class="content-container">
+
+       <section class="slideshow-container">
+        
+        <div class="slides-wrapper">
+            
+            <div class="mySlides fade">
+                <img src="Selektive1.png" alt="Event Photo 1">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="Selektive 2.png" alt="Event Photo 2">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="Selektive 3.png" alt="Event Photo 3">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="Selektive 4.png" alt="Event Photo 4">
+            </div>
+
+            
+        </div>
+
+        
+
+    </section>
         
         <section id="section1" class="clearfix">
             <h2>Hosts: Design Your Event</h2>
@@ -80,6 +111,49 @@
     <footer>
         <p>&copy; 2025 Setor Agodo Selektive&copy;</p>
     </footer>
+
+
+    <script>
+
+        let slideIndex = 0; // Start at the first slide
+const cycleTime = 3000; // 3000 milliseconds = 3 seconds
+
+function showSlides() {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+
+    // 1. Hide all slides
+    for (i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+    }
+
+    // 2. Increment slide index. If we pass the last slide, loop back to the first (0).
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    // 3. Display the current slide
+    // Note: We use slideIndex - 1 because JavaScript arrays are 0-indexed.
+    slides[slideIndex - 1].classList.add('active');
+
+    // 4. Call showSlides() again after the cycleTime interval
+    setTimeout(showSlides, cycleTime); 
+}
+
+// Initial call to start the slideshow
+// We start the index at 0, so the first call shows the 1st slide.
+// We make a dummy initial call to set up the first slide before the timeout loop starts.
+window.onload = function() {
+    const slides = document.getElementsByClassName("mySlides");
+    if (slides.length > 0) {
+        // Start by displaying the very first slide before the cycle begins
+        slides[0].classList.add('active');
+        // Wait 3 seconds, then start the loop
+        setTimeout(showSlides, cycleTime);
+    }
+}
+    </script>
 
 </body>
 </html>
